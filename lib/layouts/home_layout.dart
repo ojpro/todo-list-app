@@ -13,6 +13,22 @@ class HomeLayout extends StatelessWidget {
           child: Text("World!"),
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.list),
+            label: "Todo",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.check),
+            label: "Done",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.archive),
+            label: "Archived",
+          ),
+        ],
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: (() {}),
         elevation: 0,
