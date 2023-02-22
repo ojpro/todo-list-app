@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-class HomeLayout extends StatelessWidget {
+class HomeLayout extends StatefulWidget {
+  @override
+  State<HomeLayout> createState() => _HomeLayoutState();
+}
+
+class _HomeLayoutState extends State<HomeLayout> {
+  int currentNavigationTabIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,6 +21,12 @@ class HomeLayout extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        currentIndex: currentNavigationTabIndex,
+        onTap: ((index) {
+          setState(() {
+            currentNavigationTabIndex = index;
+          });
+        }),
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.list),
