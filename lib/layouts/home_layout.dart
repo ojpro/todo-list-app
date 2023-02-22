@@ -28,12 +28,14 @@ class _HomeLayoutState extends State<HomeLayout> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.greenAccent,
         title: Text(
           appBarTitles[currentNavigationTabIndex],
         ),
       ),
       body: navigationScreens[currentNavigationTabIndex],
       bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Colors.greenAccent,
         currentIndex: currentNavigationTabIndex,
         onTap: ((index) {
           setState(() {
@@ -56,6 +58,7 @@ class _HomeLayoutState extends State<HomeLayout> {
         ],
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.greenAccent,
         onPressed: (() {}),
         elevation: 0,
         child: const Icon(Icons.add),
