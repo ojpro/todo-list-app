@@ -13,6 +13,11 @@ class HomeLayout extends StatelessWidget {
           child: Text("World!"),
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (() {}),
+        elevation: 0,
+        child: const Icon(Icons.add),
+      ),
     );
   }
 }
